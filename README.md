@@ -22,14 +22,11 @@ Issues I addressed:
 - Removed the many lines at the top and bottom of the file that contain notes and not the raw data.
 - Removed the column headings are repeated on multiple lines throughout the file, keeping the first one.
 - Removed the blank lines in the middle of the data.
-- there is missing data indicated with `***` - figure out how to **handle missing data so that your analyses are correct**.
-- the temperature anomalies in this data are given in 0.01 degrees Celsius.  **Convert temperature anomalies to Farenheit**, the US standard unit of temperature:
-    - the formula to do this can be found within the data set
-    - format the results so that there's one decimal place (use [format](https://docs.python.org/3/library/functions.html#format) with `.1f` as the second argument)
-- since this data is in *fixed-width column format*, there are inconsistent numbers of spaces separating the numeric values... **you optionally may want to standardize how many spaces are used as separators**.
-- you are welcome to do **any additional cleanup that helps** you analyze the data in the next step.
+- Missing data: there was only 1 piece of missing data which I chose to simply omit since it is a single missing record that I believe will be absorbed in the grand picture. 
+- The temperature anomalies in this data are given in 0.01 degrees Celsius.  I converted these to Farenheit, the US standard unit of temperature for greater understandability. I also rounded it to 1 decimal place for ease of readability. 
+- This data is in *fixed-width column format*, there are inconsistent numbers of spaces separating the numeric values. **you optionally may want to standardize how many spaces are used as separators**.
 
-Your program must do this cleanup and transformation in a way that is repeatable.  If we were to take the original data file from NASA and run your `munge.py` program on it, these issues would all be resolved in a new file, `clean_data.csv`.
+All of this data was saved in a new file, `clean_data.csv`.
 
 ### Part 3: Analyze it
 I performed some aggregate statistics on the data.
