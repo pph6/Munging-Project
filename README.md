@@ -1,4 +1,4 @@
-# Raw Data Munging
+# Data Munging using Python
 
 ## Objectives:
 I will try to make usable a real data source: **NASA's historic measurements of the Earth's surface temperatures**:
@@ -28,6 +28,12 @@ Issues I addressed:
 
 All of this data was saved in a new file, `clean_data.csv`.
 
-### Part 3: Analyze it
-I performed some aggregate statistics on the data.
+### Analyzing 
+I performed some aggregate statistics on the data in the file named `analyze.py`. This program: 
 
+- Opens up the cleaned up data file, `clean_data.csv` and imports it using Python's `csv` module.
+- Outputs the average temperature anomaly in degrees Farenheit for each decade since 1880.  For example, output the average temperature anomaly for the decades:
+    - 1880 to 1889
+    - 1890 to 1899
+    - 1900 to 1909
+    - ...and so on.
